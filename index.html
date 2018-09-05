@@ -1,4 +1,4 @@
-<HTML>
+<HTML style="height: 100%;">
 <HEAD>
  <!-- Buttons core css -->
   <link rel="stylesheet" href="buttons.css">
@@ -28,6 +28,12 @@ text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px
 
 body {
   background-color: #000000;
+}
+</style>
+<style>
+html, body
+{
+  height: 100%;
 }
 </style>
 <script>
@@ -91,9 +97,9 @@ var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + 
 }
 </script>
 </HEAD>
-<BODY BGCOLOR="#000000" onload="reset();">
+<BODY BGCOLOR="#000000" onload="reset();" style="height: 100%;">
 
-<TABLE WIDTH="100%" HIGHT="100%">
+<TABLE WIDTH="100%" HIGHT="100%" style="height: 100%;">
 <TR>
 <TD ALIGN="CENTER" BGCOLOR="RED" WIDTH="5%">
 <button class="button button-3d button-box button-jumbo" type="button"  onclick="incrementRedValue();"><i class="fas fa-basketball-ball" aria-hidden="true"></i></button>
