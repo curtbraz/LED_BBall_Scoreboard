@@ -9,16 +9,16 @@ if(isset($_REQUEST['bluename'])){$bluename = $_REQUEST['bluename'];} else {$blue
 
 $padding = "";
 
-$signmessage = $redname." ".$red.$blue." ".$bluename;
+$signmessage = $redname."-".$red.$blue."-".$bluename;
 
 $length = strlen($signmessage);
 
-$padding = 16 - $length;
+$padding = 14 - $length;
 
 if($padding == 1){$padding = " ";}
 if($padding == 2){$padding = "  ";}
-if($padding == 3){$padding = "  ";}
-if($padding == 4){$padding = "   ";}
+if($padding == 3){$padding = "   ";}
+if($padding == 4){$padding = "    ";}
 if($padding == 5){$padding = "     ";}
 if($padding == 6){$padding = "      ";}
 if($padding == 7){$padding = "       ";}
