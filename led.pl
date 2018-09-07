@@ -101,7 +101,7 @@ if($message_type eq "h"){
 # Optionally set hardcoded values here for the color of the sign and display function
 #print BETABRITE "$INIT" . "AA" . "$ESC" . "$DPOS" . "$MODE" . "$GREEN" . "$message" . "$EOT";
 
-print BETABRITE "$INIT" . "AA" . "$ESC" . "$DPOS" . "$HOLD" . "$ORANGE" . "$message" . "$EOT";
+print BETABRITE "$INIT" . "AA" . "$ESC" . "$DPOS" . "n7" . "$RED" .  "$message" . "$EOT";
 
 
 
