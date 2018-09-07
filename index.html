@@ -13,6 +13,17 @@ td > * {
 }
 </style>
 <style>
+p input {
+  border: none;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  font-color: #ffffff;
+  padding: none;
+  width: auto;
+}
+</style>
+<style>
 .hit-the-floor {
 color: #fff;
 font-size: 4em;
@@ -52,7 +63,7 @@ function incrementRedValue()
     value++;
     document.getElementById('rednumber').value = value;
 
-var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value;
+var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value + '&bluename=' + document.getElementById('bluename').value + '&redname=' + document.getElementById('redname').value;
 
     new Image().src = url;
 }
@@ -65,7 +76,7 @@ function decreaseRedValue()
     value = value - 1;
     document.getElementById('rednumber').value = value;
 
-var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value;
+var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value + '&bluename=' + document.getElementById('bluename').value + '&redname=' + document.getElementById('redname').value;
 
     new Image().src = url;
 }
@@ -78,7 +89,7 @@ function incrementBlueValue()
     value++;
     document.getElementById('bluenumber').value = value;
 
-var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value;
+var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value + '&bluename=' + document.getElementById('bluename').value  + '&redname=' + document.getElementById('redname').value;
 
     new Image().src = url;
 }
@@ -91,7 +102,7 @@ function decreaseBlueValue()
     value = value - 1;
     document.getElementById('bluenumber').value = value;
 
-var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value;
+var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + '&blue=' + document.getElementById('bluenumber').value + '&bluename=' + document.getElementById('bluename').value + '&redname=' + document.getElementById('redname').value;
 
     new Image().src = url;
 }
@@ -101,28 +112,27 @@ var url = '/scoreboard.php?red=' + document.getElementById('rednumber').value + 
 
 <TABLE WIDTH="100%" HIGHT="100%" style="height: 100%;">
 <TR>
-<TD ALIGN="CENTER" BGCOLOR="RED" WIDTH="5%">
-<button class="button button-3d button-box button-jumbo" type="button"  onclick="incrementRedValue();"><i class="fas fa-basketball-ball" aria-hidden="true"></i></button>
-<br><br><br><br>
-<button class="button button-3d button-box button-jumbo" type="button"  onclick="decreaseRedValue();"><i class="fa fa-minus" aria-hidden="true"></i></button>
+<TD ALIGN="CENTER" WIDTH="50%">
+<input style="border:none; font-size:75px; text-align: center; background-color : #000000; color : #ffffff;" type="text" id="redname" value="Red" MAXLENGTH="4" SIZE="4">
+<br>
+<input  style="border:none; font-size:30px; text-align: center; background-color : #000000; color : #ffffff;" type="text" id="rednumber" value="0" size="1">
 </TD>
-<TD ALIGN="CENTER" WIDTH="15%">
-<div class="hit-the-floor">Red</div>
-<font color="#ffffff">
-<input id="rednumber" value="0" size="1">
-</font>
+<TD ALIGN="CENTER" WIDTH="50%">
+<input style="border:none; font-size:75px; text-align: center; background-color : #000000; color : #ffffff;" type="text" id="bluename" value="Blue" MAXLENGTH="4" SIZE="4">
+<br><input style="border:none; font-size:30px; text-align: center; background-color : #000000; color : #ffffff;" type="text" id="bluenumber" value="0" size="1">
 </TD>
-<TD WIDTH="60%" ALIGN="CENTER">
-<IMG SRC="BBCourt.png" WIDTH="100%">
+</TR><TR>
+<TD ALIGN="CENTER" BGCOLOR="RED" WIDTH="50%">
+<button class="button button-3d button-box button-giant" type="button"  onclick="incrementRedValue();"><i class="fas fa-basketball-ball" aria-hidden="true"></i></button>
 </TD>
-<TD ALIGN="CENTER" WIDTH="15%"
-<div class="hit-the-floor">Blue</div>
-<br><font color="#ffffff"><input type="text" id="bluenumber" value="0" size="1"></font>
+<TD ALIGN="CENTER" BGCOLOR="BLUE" WIDTH="50%">
+<button class="button button-3d button-box button-giant" type="button"  onclick="incrementBlueValue();"><i class="fas fa-basketball-ball" aria-hidden="true"></i></button>
+</TD><TR>
+<TD ALIGN="CENTER" BGCOLOR="RED" WIDTH="50%">
+<button class="button button-3d button-box button-giant" type="button"  onclick="decreaseRedValue();"><i class="fa fa-minus" aria-hidden="true"></i></button>
 </TD>
-<TD ALIGN="CENTER" BGCOLOR="BLUE" WIDTH="5%">
-<button class="button button-3d button-box button-jumbo" type="button"  onclick="incrementBlueValue();"><i class="fas fa-basketball-ball" aria-hidden="true"></i></button>
-<br><br><br><br>
-<button class="button button-3d button-box button-jumbo" type="button"  onclick="decreaseBlueValue();"><i class="fa fa-minus" aria-hidden="true"></i></button>
+<TD ALIGN="CENTER" BGCOLOR="BLUE" WIDTH="50%">
+<button class="button button-3d button-box button-giant" type="button"  onclick="decreaseBlueValue();"><i class="fa fa-minus" aria-hidden="true"></i></button>
 </TD>
 </TR>
 </TABLE>
